@@ -9,19 +9,16 @@ import { HomePage } from './components/HomePage/HomePage.jsx';
 import { ProductPage } from './components/ProductPage/ProductPage.jsx';
 
 //---router config
-const router = createBrowserRouter(
-  [
-    {
-      path: '/',
-      element: <App />,
-      children: [
-        { path: '', element: <HomePage /> },
-        { path: '/product/:productId', element: <ProductPage /> },
-      ],
-    },
-  ],
-  { basename: '/nabytek-xxxmuck-test' },
-);
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <App />,
+    children: [
+      { path: '', element: <HomePage /> },
+      { path: '/product/:productId', element: <ProductPage /> },
+    ],
+  },
+]);
 
 //---render
 ReactDOM.createRoot(document.getElementById('root')).render(
